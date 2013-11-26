@@ -8,7 +8,7 @@
     "test": "mocha test/*.test.js",
     "pretest": "jshint .",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js",
-    "coveralls": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "istanbul cover ./node_modules/.bin/_mocha test/*.test.js --report lcovonly --dir shippable/codecoverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
