@@ -5,4 +5,4 @@ node_js:
 before_script:
   mkdir -p shippable/codecoverage shippable/testresults
 script:
-  - npm test --shippable/testresults && npm run-script coveralls 
+  - npm test && npm run-script coveralls --dir shippable/codecoverage/
