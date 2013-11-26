@@ -2,5 +2,7 @@ language: node_js
 node_js:
   - 0.8
   - 0.10
+before_script:
+  mkdir -p shippable/codecoverage shippable/testresults
 script:
-  - npm test && npm run-script coveralls
+  - npm test --junit-xml=shippable/testresults/results.xml && npm run-script coveralls --cov-report xml
